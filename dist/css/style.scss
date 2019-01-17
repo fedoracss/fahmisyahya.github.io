@@ -1,0 +1,125 @@
+*:after,
+*:before,
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #2c3e50!important;
+    background: #ecf0f1!important;
+    background-attachment: fixed;
+}
+
+$primary-color: #2ecc71!important;
+
+a{
+    color: $primary-color;
+    text-decoration: none;
+    &:hover{
+        color: #27ae60!important;
+    }
+}
+
+//container
+
+.container{
+    width: auto;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@media (min-width: 601px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media (min-width: 923px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        width: 80%;
+    }
+}
+
+// web header
+
+.bg-header{
+    padding: 128px 0;
+    background: $primary-color;
+    z-index: -1;
+}
+
+.web-header{
+    margin-top: -224px;
+    hgroup{
+        float: left;
+        h1{
+            color: #ffffff!important;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            font-size: 42px;
+        }
+        h4{
+            color: #ffffff!important;
+            margin: 0;
+            padding: 0;
+            font-weight: 500;
+            font-size: 22px;
+        }
+    }
+}
+
+// web content
+
+.web-content{
+    margin-top: 128px;
+    padding: 16px 32px;
+    display: block;
+}
+
+// card
+
+.card{
+    background: #f5f5f5!important;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.12);
+}
+
+// social icon
+
+// nav.social-icon{
+//     margin: 0;
+//     padding: 0;
+//     background: transparent;
+//     float: right;
+//     ul{
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+//         overflow: hidden;
+//         li{
+//             float: left;
+//             a{
+//                 color: #ffffff!important;
+//                 display: block;
+//                 padding: 16px 16px;
+//             }
+//         }
+//     }
+//   }
