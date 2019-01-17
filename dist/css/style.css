@@ -63,6 +63,8 @@ a:hover {
 
 .web-header {
   margin-top: -224px;
+  margin-left: -16px;
+  margin-right: -16px;
 }
 
 .web-header hgroup {
