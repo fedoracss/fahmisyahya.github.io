@@ -1,101 +1,175 @@
 *:after,
 *:before,
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
 }
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
   font-weight: normal;
+  font-size: 1rem;
   line-height: 1.5;
-  color: #2c3e50 !important;
-  background: #ecf0f1 !important;
-  background-attachment: fixed;
+  color: #2c3e50;
+  background: #ecf0f1;
 }
-
 a {
-  color: #2ecc71 !important;
+  color: #3498db;
   text-decoration: none;
 }
-
-a:hover {
-  color: #27ae60 !important;
+/* navbar */
+nav.navbar {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12), 0px 1px 2px 0px rgba(0,0,0,0.24);
 }
-
-.container {
-  width: auto;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-@media (min-width: 601px) {
-  .container {
-    width: 80%;
-  }
-}
-
-@media (min-width: 923px) {
-  .container {
-    width: 80%;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 80%;
-  }
-}
-
-.bg-header {
-  padding: 128px 0;
-  background: #2ecc71 !important;
-  z-index: -1;
-}
-
-.web-header {
-  margin-top: -224px;
-}
-
-.web-header hgroup {
+nav.navbar header.navbar-head a {
   float: left;
-  margin-left: -16px;
-  margin-right: -16px;
-}
-
-.web-header hgroup h1 {
-  color: #ffffff !important;
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-size: 42px;
-}
-
-.web-header hgroup h4 {
-  color: #ffffff !important;
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
+  display: block;
+  color: #2c3e50;
+  font-weight: normal;
   font-size: 22px;
+  padding: 12px 16px;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
-
-.web-content {
-  margin-top: 128px;
-  padding: 16px 32px;
+nav.navbar ul.navbar-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav.navbar ul.navbar-menu li {
+  float: left;
+}
+nav.navbar ul.navbar-menu li a {
+  display: block;
+  padding: 12px 16px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+nav.navbar ul.navbar-menu.right {
+  float: right;
+}
+/* container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+/* welcome */
+.welcome h1 {
+  font-size: 42px;
+  margin: 0;
+  padding: 0;
+}
+/* card */
+.card {
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12), 0px 1px 2px 0px rgba(0,0,0,0.24);
+  margin: 16px 0;
   display: block;
 }
-
-.card {
-  background: #ffffff !important;
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+.card img {
+  width: 100%;
+  transition: all 0.2s ease;
 }
-/*# sourceMappingURL=style.css.map */
+.card img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.card .content {
+  padding: 16px 16px;
+}
+.card .content .card-title {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+/* button */
+.btn {
+  display: inline-block;
+  border: 1px solid #ecf0f1;
+  color: #2c3e50;
+  background: #ecf0f1;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 12px 16px;
+  font-family: inherit;
+}
+/* grid */
+.grid::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.set {
+  float: left;
+  padding: 0 16px;
+}
+.grid {
+  margin: 0 -16px;
+}
+@media (min-width: 992px) {
+  .lg-1 {
+    width: 8.333333333333332%;
+  }
+  .lg-2 {
+    width: 16.666666666666664%;
+  }
+  .lg-3 {
+    width: 25%;
+  }
+  .lg-4 {
+    width: 33.33333333333333%;
+  }
+  .lg-5 {
+    width: 41.66666666666667%;
+  }
+  .lg-6 {
+    width: 50%;
+  }
+  .lg-7 {
+    width: 58.333333333333336%;
+  }
+  .lg-8 {
+    width: 66.66666666666666%;
+  }
+  .lg-9 {
+    width: 75%;
+  }
+  .lg-10 {
+    width: 83.33333333333334%;
+  }
+  .lg-11 {
+    width: 91.66666666666666%;
+  }
+  .lg-12 {
+    width: 100%;
+  }
+}
+/* viewport */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .navbar .navbar-head a.brand {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .navbar ul.right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
